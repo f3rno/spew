@@ -9,7 +9,7 @@ I've created a basic example, and will add more as I migrate more functionality 
 
 Basic Example
 =============
-
+```javascript
 	var spew = require("../spew.js");
 	var fs = require("fs");
 
@@ -43,3 +43,4 @@ Basic Example
 	} catch(e) {
 		spew.error("README.md not found!");
 	}
+```
