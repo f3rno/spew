@@ -1,0 +1,27 @@
+{
+	"name": "spew",
+	"description": "Extendable logging module, with support for logging to remote servers, disk, and GCM!",
+	"version": "0.0.1",
+	"author": {
+		"name": "Cris Mihalache",
+		"url": "http://www.spectrumcoding.com",
+		"email": "mircea.mihalache94@gmail.com"
+	},
+	"keywords": [
+		"log",
+		"gcm",
+		"logging",
+		"email"
+	],
+	"homepage": "https://github.com/Mirceam94/spew",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Mirceam94/spew.git"
+	},
+	"main": "spew.js",
+	"license": "MIT",
+	"dependencies": {
+		"nodemailer": "0.4.1",
+		"request": "2.21.0"
+	}
+}
