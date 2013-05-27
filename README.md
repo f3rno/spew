@@ -3,7 +3,7 @@ Spew
 
 A simple logging module for NodeJS. I had to create my own logging plugin for all of my node projects, and ended up adding so many features that it now consists of enough functionality to move into a seperate, official module.
 
-I'll continue to add more handlers too it over time, but for now this should suffice. If you find any bugs, or wish to contribute, feel free to send a pull request or create a new issue :)
+I'll continue to add more handlers to it over time, but for now this should suffice. If you find any bugs, or wish to contribute, feel free to send a pull request or create a new issue :)
 
 I've created a basic example, and will add more as I migrate more functionality from my various projects
 

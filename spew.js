@@ -88,8 +88,46 @@ var channels = {
 				}, function(err, res, body) {if(err) { console.log(err); }});
 			};
 		}
+	},
+
+	// Google cloud messaging, regIDs are kept in the public array spew.regIds
+	"gcm": {
+
+		"format": globalFormatting,
+		"enabled": false,
+
+		// Setup for logging over google cloud messaging
+		//
+		// Args
+		//  authKey    - GCM server auth key
+		//
+		//  Data is sent in an object, containing "tag" and "msg"
+		"setup": function(authKey) {
+
+			this.out = function(tag, msg, color) {
+
+				if(exports.regIds.length > 0) {
+					request.post({
+						uri: "https://android.googleapis.com/gcm/send",
+						json: {
+							registration_ids: exports.regIds,
+							data: {
+								"tag": tag,
+								"msg": msg
+							}
+						},
+						headers: {
+							Authorization: "key=" + authKey
+						}
+					});
+				}
+			};
+		}
 	}
 };
+
+// GCM registered ids
+exports.regIds = [];
 
 // Default log level
 var globalLogLevel = 2; // Includes Critical, Error, and Warning
@@ -159,10 +197,16 @@ exports.setLogLevel = function(l) { globalLogLevel = l; };
 exports.getLogLevel = function() { return globalLogLevel; };
 
 // Enable/Disable channels
-exports.setChannelStatus = function(chan, status) {
+exports.enableChannel = function(chan) {
 
 	if(channels[chan]) {
-		channels[chan].enabled = status;
+		channels[chan].enabled = true;
+	}
+};
+exports.disableChannel = function(chan) {
+
+	if(channels[chan]) {
+		channels[chan].enabled = false;
 	}
 };
 exports.getChannelStatus = function(chan) {
@@ -202,6 +246,13 @@ exports.removeChannel = function(name) {
 		channels[name] = undefined;
 	}
 };
+
+// Used to access channel setup()
+//
+// Although there is probably a better way of doing this...
+exports.getChannel = function(name) {
+	return channels[name];
+}
 
 // Enable/Disable emails
 //

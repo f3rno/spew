@@ -1,7 +1,7 @@
 {
 	"name": "spew",
 	"description": "Extendable logging module, with support for logging to remote servers, disk, and GCM!",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": {
 		"name": "Cris Mihalache",
 		"url": "http://www.spectrumcoding.com",
