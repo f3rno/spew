@@ -209,6 +209,16 @@ exports.disableChannel = function(chan) {
 		channels[chan].enabled = false;
 	}
 };
+exports.enableAll = function() {
+	for(var i = 0; i < channels.length; i++) {
+		channels[i].enabled = true;
+	}
+};
+exports.disableAll = function() {
+	for(var i = 0; i < channels.length; i++) {
+		channels[i].enabled = false;
+	}
+};
 exports.getChannelStatus = function(chan) {
 
 	if(channels[status]) {
