@@ -1,18 +1,18 @@
 {
   "name": "spew",
   "description": "Extendable logging module, with support for logging to remote servers, disk, and GCM!",
-  "version": "0.0.3",
-  "author": "Cris Mihalache <mircea.mihalache94@gmail.com> (http://www.spectrumcoding.com)",
+  "version": "0.0.4",
+  "author": "Cris Mihalache <cris@spectrumcoding.com>",
   "keywords": [
     "log",
     "gcm",
     "logging",
     "email"
   ],
-  "homepage": "https://github.com/Mirceam94/spew",
+  "homepage": "https://github.com/fernol/spew",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Mirceam94/spew.git"
+    "url": "https://github.com/fernol/spew.git"
   },
   "main": "spew.js",
   "license": "MIT",
@@ -21,15 +21,11 @@
     "request": "2.21.0"
   },
   "readmeFilename": "README.md",
-  "gitHead": "326af63460d8ce45b991776715ff214f03d68a03",
   "bugs": {
-    "url": "https://github.com/Mirceam94/spew/issues"
+    "url": "https://github.com/fernol/spew/issues"
   },
   "directories": {
     "example": "examples"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  "devDependencies": {}
 }
