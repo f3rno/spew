@@ -1,4 +1,5 @@
 config = require "./config"
+fs = require "fs"
 
 class Spew
 
