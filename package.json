@@ -1,7 +1,7 @@
 {
   "name": "spew",
   "description": "Extendable logging module, with support for logging to remote servers, disk, and GCM!",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "author": "Cris Mihalache <cris@spectrumcoding.com>",
   "keywords": [
     "log",
@@ -14,11 +14,15 @@
     "type": "git",
     "url": "https://github.com/fernol/spew.git"
   },
-  "main": "spew.js",
+  "main": "build/spew.js",
   "license": "MIT",
   "dependencies": {
-    "nodemailer": "0.4.1",
     "request": "2.21.0"
+  },
+  "devDependencies": {
+    "gulp-coffee": "~2.1.1",
+    "gulp": "~3.8.6",
+    "coffee-script": "~1.7.1"
   },
   "readmeFilename": "README.md",
   "bugs": {
@@ -27,5 +31,7 @@
   "directories": {
     "example": "examples"
   },
-  "devDependencies": {}
+  "scripts": {
+    "prepublish": "gulp"
+  }
 }
