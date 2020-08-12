@@ -17,7 +17,7 @@
   "main": "build/spew.js",
   "license": "MIT",
   "dependencies": {
-    "request": "2.21.0"
+    "request": "2.88.2"
   },
   "devDependencies": {
     "gulp-coffee": "~2.1.1",
